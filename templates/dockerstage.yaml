@@ -1,0 +1,17 @@
+pool:
+  name: default
+
+stages:
+- stage: docker 
+  displayName: docker image 
+  jobs:
+  - job: dockerim
+    displayName: my job
+    steps:
+    -  task: Docker@2
+       displayName: image build and push
+       inputs:
+         command: 'build and push'
+         Dockerfile: '**/Dockerfile'
+         containerRegistry: ''
+
