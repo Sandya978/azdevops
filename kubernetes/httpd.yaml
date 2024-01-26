@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: http-image
-      image: httpd:2.4
+      image: httpd:2.4.58
       ports:
         - containerPort: 80
           protocol: "TCP"
