@@ -6,3 +6,6 @@ spec:
   containers:
     - name: dyingalpine
       image: alpine
+      args:
+        - sleep
+        - 1d
