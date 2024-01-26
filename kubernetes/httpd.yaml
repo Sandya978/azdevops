@@ -6,9 +6,9 @@ spec:
   containers:
     - name: http-image
       image: httpd
-  ports:
-    - containerPort: 80
-      protocol: tcp
+      ports:
+        - containerPort: 80
+          protocol: TCP
  
     
 
