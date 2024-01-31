@@ -15,7 +15,7 @@ spec:
           value:  user123
         - name:  POSTGRES_DB
           value:  postgresdb  
-  resources:
-    limits:
-      cpus:  "1.0"
-      memory:  "256mi"  
+      resources:
+        limits:
+          cpus:  "1.0"
+          memory:  "256mi"  
