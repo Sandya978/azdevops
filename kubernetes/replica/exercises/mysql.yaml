@@ -9,7 +9,7 @@ spec:
     - name: db
       image: postgres:alpine3.19
       env:
-        - name: POSTGRES_PASSWORD
+        - name:  POSTGRES_PASSWORD
           value:  postgres123
         - name:  POSTGRES_USER
           value:  user123
