@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: postgres
+  name: postgres-db
+spec:
+  containers:
+    - name: db
+      image: postgres:alpine3.19
+      env:
+        - name: POSTGRES_PASSWORD
+          value:  postgres123
+        - name:  POSTGRES_USER
+          value:  user123
+        - name:  POSTGRES_DB
+          value:  postgresdb  
+  resources:
+    limits:
+      cpus:  "1.0"
+      memory:  "256mi"  
