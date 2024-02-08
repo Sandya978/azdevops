@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: task-1_svc
+  name: task-1-svc
   labels:
     app: http
 spec:
@@ -12,12 +12,12 @@ spec:
       app: httpd
   template: 
     metadata:
-      name: task-1_pod
+      name: task-1-pod
       labels:
         app: httpd
     spec:
       containers:
-        - name: task-1_con
+        - name: task-1-con
           image: httpd
           ports:
             - containerPort: 80
