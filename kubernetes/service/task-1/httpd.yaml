@@ -13,8 +13,8 @@ spec:
   template: 
     metadata:
       name: task-1_pod
-  labels:
-    app: http
+      labels:
+        app: httpd
     spec:
       containers:
         - name: task-1_con
