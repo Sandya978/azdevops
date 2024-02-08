@@ -7,7 +7,7 @@ spec:
   replicas: 10
   selector:
     matchLabels:
-      app: jenkins
+      app: alpine
       version: "1.0"
   strategy:
     type: "RollingUpdate"

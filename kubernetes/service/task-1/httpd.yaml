@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: task-1_svc
+  labels:
+    app: http
+spec:
+  minReadySeconds: 3
+  replicas: 3
+  selector:
+    matchLabels:
+      app: httpd
+  template: 
+    metadata:
+      name: task-1_pod
+  labels:
+    app: http
+    spec:
+      containers:
+        - name: task-1_con
+          image: httpd
+          ports:
+            - containerPort: 80
+
+
+
+    

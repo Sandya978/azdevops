@@ -14,5 +14,5 @@ spec:
         - name:  POSTGRES_USER
           value:  user123
         - name:  POSTGRES_DB
-          value:  postgresdb  
+          value: postgresdb
      
