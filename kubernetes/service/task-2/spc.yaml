@@ -19,6 +19,8 @@ spec:
       name: task-2-pod
       labels:
         app: spc
+        env: dev
+        version: v3.4.0
     spec:
       containers:
         - name: task-2-con
