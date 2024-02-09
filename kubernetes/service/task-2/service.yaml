@@ -9,7 +9,7 @@ spec:
     env: dev
     version: v3.4.0
   ports:
-    - name: nodePort
+    - name: nodeport
       port: 8080
       targetPort: 8080
       nodePort: 31000
