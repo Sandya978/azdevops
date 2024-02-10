@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "exec_deploy"
+spec:
+  minReadySeconds: 3
+  replicas: 4
+  selector:
+    matchLabels:
+      app: httpd
+      version: "1.0"
+  strategy:
+    type: "RollingUpdate"
+    rollingUpdate:
+      maxSurge: "25%"
+      maxUnavailable: "25%"
+  template:
+    metadata:
+      labels:
+        app: httpd
+        version: "1.0"
+    spec:
+      containers:
+        - name: "httpd-con"
+          image: httpd
+          volumeMounts:
+            - name: name
+              mountPath: \
+      ports:
+        - containerPort: 80
+      volumes:
+        - name: empty
+          emptyDir:
+            sizeLimit: "400mi"
+      readinessProbe:
+        httpGet:
+          path: /
+          port: 80
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 80
+        
+          
+
+
+      
