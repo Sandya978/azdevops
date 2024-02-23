@@ -1,14 +1,1 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: task3_deploy 
-spec:
-  minReadySeconds: 3
-  replicas: 3
-  selector:
-  strategy:
-    type: "RollingUpdate"
-    
-  
-
-  
+:

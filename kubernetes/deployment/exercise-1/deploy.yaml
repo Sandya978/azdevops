@@ -1,10 +1,10 @@
-apiVersion: apps/v1
+apiversion: apps/v1
 kind: Deployment
 metadata:
   name: "exec_deploy"
 spec:
   minReadySeconds: 3
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: httpd
@@ -24,8 +24,8 @@ spec:
         - name: "httpd-con"
           image: httpd
           volumeMounts:
-            - name: name
-              mountPath: \
+            - name: empty
+              mountPath: /tmp
       ports:
         - containerPort: 80
       volumes:
